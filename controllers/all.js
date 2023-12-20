@@ -37,15 +37,15 @@ export const getallproducts = async (req, res) => {
               },
             },
           },
-          {
-            $expr: {
-              $regexMatch: {
-                input: { $toString: "$rating" },
-                regex: searchTerm,
-                options: "i",
-              },
-            },
-          },
+          // {
+          //   $expr: {
+          //     $regexMatch: {
+          //       input: { $toString: "$rating" },
+          //       regex: searchTerm,
+          //       options: "i",
+          //     },
+          //   },
+          // },
         ],
       });
     }
